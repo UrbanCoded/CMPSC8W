@@ -1,5 +1,9 @@
 def exact_change(user_input):
 
+    if "." in user_input:
+        user_input = float(user_input * 100)
+        user_input = int(user_input)
+
     if user_input <= 0:
         print("no change")
 
@@ -53,5 +57,5 @@ def exact_change(user_input):
 
 if __name__ == "__main__":
 
-    user_total = int(input())
+    user_total = input("Please Input Value \n")
     exact_change(user_total)
