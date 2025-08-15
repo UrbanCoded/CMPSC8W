@@ -11,6 +11,10 @@ def exact_change():
         x = int(x * 100)
     else:
         x = int(x)
+
+    if x == 0:
+        print("no change")
+        return 
     
     #dollar check
 
