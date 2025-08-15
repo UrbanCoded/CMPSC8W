@@ -1,11 +1,14 @@
 def exact_change(user_input):
 
     if "." in user_input:
-        user_input = float(user_input * 100)
+        user_input = float(user_input)
+        user_input = int(user_input * 100)
+    else:
         user_input = int(user_input)
 
     if user_input <= 0:
         print("no change")
+        return (user_input)
 
     num_dollars = 0
     num_quarters = 0
